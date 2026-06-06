@@ -1,0 +1,12 @@
+[project]
+name = "callama"
+version = "0.1.0"
+description = "A API experiement to test or check that how user query sends to AI model how we got our answers."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.136.3",
+    "ollama>=0.6.2",
+    "python-dotenv>=1.2.2",
+    "uvicorn>=0.49.0",
+]
