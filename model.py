@@ -1,14 +1,15 @@
 from dotenv import load_dotenv
-import ollama
+from ollama import Client
 import os
 
 load_dotenv(dotenv_path="./.env")
 model_name = os.getenv("MODEL")
-
+host = os.getenv("OLLAMA_HOST")
+client = Client(host=host)
 
 def ask(prompt_or_query: str) -> str:
     try:
-        response = ollama.generate(
+        response = client.generate(
             model=model_name,
             prompt=prompt_or_query
         )
